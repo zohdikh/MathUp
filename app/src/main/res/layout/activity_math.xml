@@ -12,7 +12,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,14 +43,14 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Number two" />
+                android:text="Operation" />
 
             <EditText
-                android:id="@+id/N2"
+                android:id="@+id/Op"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -63,14 +64,14 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Operation" />
+                android:text="Number two" />
 
             <EditText
-                android:id="@+id/Op"
+                android:id="@+id/N2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -110,6 +111,7 @@
             android:id="@+id/button9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="MoveTo"
             android:text="Next" />
 
     </LinearLayout>
