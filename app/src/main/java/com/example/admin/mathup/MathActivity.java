@@ -102,15 +102,12 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
         {
             num1 = r1.nextInt(100);
             num2 = r2.nextInt(100);
-            ope = r1.nextInt(4);
+            ope = r1.nextInt(2);
             if (ope == 1)
                 operation = "+";
-            else if (ope == 2)
-                operation = "-";
-            else if (ope == 3)
-                operation = "*";
             else
-                operation = "/";
+                operation = "-";
+
             n1.setText(String.valueOf(num1));
             n2.setText(String.valueOf(num2));
             op.setText(operation.toString());
