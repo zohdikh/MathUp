@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MathUp</string>
+    <string name="mthbtn">חישוב</string>
+    <string name="next">הבא</string>
+    <string name="nm1">מספר ראשון</string>
+    <string name="op">פעולה</string>
+    <string name="scdn">מספר שני</string>
+    <string name="lvl">בחר רמה</string>
+    <string name="go">התחל</string>
+    <string-array name="levels">
+        <item>רמה 1</item>
+        <item>רמה 2</item>
+        <item>רמה 3</item>
+        <item>רמה 4</item>
+        <item>רמה 5</item>
+        <item>רמה 6</item>
+    </string-array>
+    <string name="err">נא הכנס תשובה</string>
+</resources>

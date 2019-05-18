@@ -3,6 +3,7 @@ package com.example.admin.mathup;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -143,8 +144,14 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
         EditText ans = (EditText) findViewById(R.id.Ans);
         int num1 , num2 , num3 ,ope;
         String operation;
+        String empt = getResources().getString(R.string.err);
         num1 = Integer.parseInt(n1.getText().toString());
         num2 = Integer.parseInt(n2.getText().toString());
+        if(TextUtils.isEmpty(ans.getText().toString()))
+        {
+            ans.setError(empt);
+            return;
+        }
         num3 = Integer.parseInt(ans.getText().toString());
         operation = op.getText().toString();
         if(operation.equals("+"))

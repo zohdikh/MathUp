@@ -25,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Number One" />
+                android:text="@string/nm1" />
 
             <EditText
                 android:id="@+id/N1"
@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Operation" />
+                android:text="@string/op" />
 
             <EditText
                 android:id="@+id/Op"
@@ -68,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Number two" />
+                android:text="@string/scdn" />
 
             <EditText
                 android:id="@+id/N2"
@@ -97,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="number"/>
         </LinearLayout>
 
         <Button
@@ -105,14 +105,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onClick"
-            android:text="MathUp" />
+            android:text="@string/mthbtn"
+        />
 
         <Button
             android:id="@+id/button9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="MoveTo"
-            android:text="Next" />
+            android:text="@string/next" />
 
     </LinearLayout>
 

@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">MathUp</string>
+    <string name="mthbtn">Math-Up</string>
+    <string name="next">Next</string>
+    <string name="nm1">First Number</string>
+    <string name="op">Operation</string>
+    <string name="scdn">Second Number</string>
+    <string name="lvl">Select Level</string>
+    <string name="go">GO</string>
+    <string-array name="levels">
+        <item>level 1</item>
+        <item>level 2</item>
+        <item>level 3</item>
+        <item>level 4</item>
+        <item>level 5</item>
+        <item>level 6</item>
+    </string-array>
+    <string name="err">This cant be empty</string>
 </resources>

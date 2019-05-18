@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MathUp</string>
+    <string name="mthbtn">أحسب</string>
+    <string name="next">التالي</string>
+    <string name="nm1">الرقم الاول</string>
+    <string name="op">العملية الحسابية</string>
+    <string name="scdn">الرقم الثاني</string>
+    <string name="lvl">أختر المستوى</string>
+    <string name="go">أبدا</string>
+    <string-array name="levels">
+        <item>المستوى الاول</item>
+        <item>المستوى الثاني</item>
+        <item>المستوى الثالث</item>
+        <item>المستوى الرابع</item>
+        <item>المستوى الخامس</item>
+        <item>المستوى السادس</item>
+    </string-array>
+    <string name="err">الرجاء ادخال جواب</string>
+</resources>
