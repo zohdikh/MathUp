@@ -11,9 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -97,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="number"/>
+                android:inputType="numberDecimal|numberSigned" />
         </LinearLayout>
 
         <Button
@@ -105,8 +105,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onClick"
-            android:text="@string/mthbtn"
-        />
+            android:text="@string/mthbtn" />
 
         <Button
             android:id="@+id/button9"
@@ -114,6 +113,19 @@
             android:layout_height="wrap_content"
             android:onClick="MoveTo"
             android:text="@string/next" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ansflag"
+                android:layout_width="209dp"
+                android:layout_height="190dp"
+                app:srcCompat="@color/colorPrimaryDark"
+                tools:layout_editor_absoluteX="101dp"
+                tools:layout_editor_absoluteY="109dp" />
+        </android.support.constraint.ConstraintLayout>
 
     </LinearLayout>
 

@@ -1,14 +1,16 @@
 package com.example.admin.mathup;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
 
 import java.util.Random;
 
@@ -134,6 +136,7 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
             operation = op.getText().toString();
         }
 
+
     }
 
     public void ClickMath()
@@ -142,9 +145,12 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
         EditText n2 = (EditText) findViewById(R.id.N2);
         EditText op = (EditText) findViewById(R.id.Op);
         EditText ans = (EditText) findViewById(R.id.Ans);
-        int num1 , num2 , num3 ,ope;
+        int num1 , num2  ,ope,imagesource;
+        double num3;
+        ImageView ansflg = (ImageView)findViewById(R.id.ansflag);
         String operation;
         String empt = getResources().getString(R.string.err);
+        ans.onEditorAction(EditorInfo.IME_ACTION_DONE);
         num1 = Integer.parseInt(n1.getText().toString());
         num2 = Integer.parseInt(n2.getText().toString());
         if(TextUtils.isEmpty(ans.getText().toString()))
@@ -152,47 +158,83 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
             ans.setError(empt);
             return;
         }
-        num3 = Integer.parseInt(ans.getText().toString());
+        num3 = Double.parseDouble(ans.getText().toString());
         operation = op.getText().toString();
         if(operation.equals("+"))
         {
-            if(num3 == (num1+num2))
+            if(num3 == (num1+num2)) {
                 Toast.makeText(MathActivity.this, "Excellent",
                         Toast.LENGTH_LONG).show();
+                /*imagesource = getResources().getIdentifier("@drawable/right",null,getPackageName());
+                ansflg.setImageResource(imagesource);*/
+                Glide.with(this).load(R.drawable.right).into(ansflg);
+            }
             else
+            {
                 Toast.makeText(MathActivity.this, "False",
                         Toast.LENGTH_LONG).show();
+                imagesource = getResources().getIdentifier("@drawable/redx",null,getPackageName());
+                ansflg.setImageResource(imagesource);
+            }
         }
 
         if(operation.equals("-"))
         {
             if(num3 == Math.max(num1,num2)-Math.min(num1,num2))
+            {
                 Toast.makeText(MathActivity.this, "Excellent",
                         Toast.LENGTH_LONG).show();
+                imagesource = getResources().getIdentifier("@drawable/right",null,getPackageName());
+                ansflg.setImageResource(imagesource);
+            }
             else if(num3== num1-num2)
+            {
                 Toast.makeText(MathActivity.this, "Excellent",
                         Toast.LENGTH_LONG).show();
+                imagesource = getResources().getIdentifier("@drawable/right",null,getPackageName());
+                ansflg.setImageResource(imagesource);
+            }
             else
+            {
                 Toast.makeText(MathActivity.this, "False",
                         Toast.LENGTH_LONG).show();
+                imagesource = getResources().getIdentifier("@drawable/redx",null,getPackageName());
+                ansflg.setImageResource(imagesource);
+            }
         }
         if(operation.equals("*"))
         {
             if(num3 == num1*num2)
+            {
                 Toast.makeText(MathActivity.this, "Excellent",
                         Toast.LENGTH_LONG).show();
+                imagesource = getResources().getIdentifier("@drawable/right",null,getPackageName());
+                ansflg.setImageResource(imagesource);
+            }
             else
+            {
                 Toast.makeText(MathActivity.this, "False",
                         Toast.LENGTH_LONG).show();
+                imagesource = getResources().getIdentifier("@drawable/redx",null,getPackageName());
+                ansflg.setImageResource(imagesource);
+            }
         }
         if(operation.equals("/"))
         {
-            if(num3 == num1/num2)
+            if(num3 == (double)num1/(double)num2)
+            {
                 Toast.makeText(MathActivity.this, "Excellent",
                         Toast.LENGTH_LONG).show();
+                imagesource = getResources().getIdentifier("@drawable/right",null,getPackageName());
+                ansflg.setImageResource(imagesource);
+            }
             else
+            {
                 Toast.makeText(MathActivity.this, "False",
                         Toast.LENGTH_LONG).show();
+                imagesource = getResources().getIdentifier("@drawable/redx",null,getPackageName());
+                ansflg.setImageResource(imagesource);
+            }
         }
 
 

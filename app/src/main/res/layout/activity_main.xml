@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="21dp"
-        android:text="Welcome to MathUp" />
+        android:text="welcome to mathup" />
 
     <TextView
         android:id="@+id/textView4"
@@ -43,6 +43,12 @@
         android:layout_marginTop="59dp"
         android:onClick="MoveTo"
         android:text="@string/go" />
+
+    <ImageView
+        android:id="@+id/lvlimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@color/colorPrimaryDark" />
 
 </RelativeLayout>
 
