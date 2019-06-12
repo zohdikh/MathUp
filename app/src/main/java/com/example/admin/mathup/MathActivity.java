@@ -119,6 +119,7 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
         //user picked level 6
         if(level.equals("6"))
         {
+
             num1 = r1.nextInt(999);
             num2 = r2.nextInt(999);
             ope = r1.nextInt(4);
