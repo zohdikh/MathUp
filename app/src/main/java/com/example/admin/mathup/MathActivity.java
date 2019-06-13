@@ -31,6 +31,8 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
         String operation;
         Random r1 = new Random();
         Random r2 = new Random();
+        DBConnections db = new DBConnections(this);
+
        // user picked level 1
         if(level.equals("1"))
         {
@@ -139,9 +141,49 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
+    /* save RIGHT answered questions to DB*/
+    public void Savetodb(String lvl , int no1,int no2,String ope)
+    {
+        DBConnections db = new DBConnections(this);
+        switch (lvl)
+        {
+            case "1":
+             db.InsertRowlvl1(no1,no2,ope);
+            case "2":
+                db.InsertRowlvl2(no1,no2,ope);
+            case "3":
+                db.InsertRowlvl3(no1,no2,ope);
+            case "4":
+                db.InsertRowlvl4(no1,no2,ope);
+            case "5":
+                db.InsertRowlvl5(no1,no2,ope);
+            case "6":
+                db.InsertRowlvl6(no1,no2,ope);
+        }
 
+    }
+    /* save WRONG answered questions to DB*/
+    public void Savetodbw(String lvl , int no1,int no2,String ope) {
+        DBConnections db = new DBConnections(this);
+        switch (lvl) {
+            case "1":
+                db.InsertRowlvl1w(no1, no2, ope);
+            case "2":
+                db.InsertRowlvl2w(no1, no2, ope);
+            case "3":
+                db.InsertRowlvl3w(no1, no2, ope);
+            case "4":
+                db.InsertRowlvl4w(no1, no2, ope);
+            case "5":
+                db.InsertRowlvl5w(no1, no2, ope);
+            case "6":
+                db.InsertRowlvl6w(no1, no2, ope);
+        }
+    }
     public void ClickMath()
     {
+        Bundle b = getIntent().getExtras();
+        level = b.getString("level");
         EditText n1 = (EditText) findViewById(R.id.N1);
         EditText n2 = (EditText) findViewById(R.id.N2);
         EditText op = (EditText) findViewById(R.id.Op);
@@ -169,6 +211,7 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
                 /*imagesource = getResources().getIdentifier("@drawable/right",null,getPackageName());
                 ansflg.setImageResource(imagesource);*/
                 Glide.with(this).load(R.drawable.right).into(ansflg);
+                Savetodb(level,num1,num2,operation);
             }
             else
             {
@@ -176,6 +219,7 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
                         Toast.LENGTH_LONG).show();
                 imagesource = getResources().getIdentifier("@drawable/redx",null,getPackageName());
                 ansflg.setImageResource(imagesource);
+                Savetodbw(level,num1,num2,operation);
             }
         }
 
@@ -187,6 +231,7 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
                         Toast.LENGTH_LONG).show();
                 imagesource = getResources().getIdentifier("@drawable/right",null,getPackageName());
                 ansflg.setImageResource(imagesource);
+                Savetodb(level,num1,num2,operation);
             }
             else if(num3== num1-num2)
             {
@@ -194,6 +239,7 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
                         Toast.LENGTH_LONG).show();
                 imagesource = getResources().getIdentifier("@drawable/right",null,getPackageName());
                 ansflg.setImageResource(imagesource);
+                Savetodb(level,num1,num2,operation);
             }
             else
             {
@@ -201,6 +247,7 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
                         Toast.LENGTH_LONG).show();
                 imagesource = getResources().getIdentifier("@drawable/redx",null,getPackageName());
                 ansflg.setImageResource(imagesource);
+                Savetodbw(level,num1,num2,operation);
             }
         }
         if(operation.equals("*"))
@@ -211,6 +258,7 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
                         Toast.LENGTH_LONG).show();
                 imagesource = getResources().getIdentifier("@drawable/right",null,getPackageName());
                 ansflg.setImageResource(imagesource);
+                Savetodb(level,num1,num2,operation);
             }
             else
             {
@@ -218,6 +266,7 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
                         Toast.LENGTH_LONG).show();
                 imagesource = getResources().getIdentifier("@drawable/redx",null,getPackageName());
                 ansflg.setImageResource(imagesource);
+                Savetodbw(level,num1,num2,operation);
             }
         }
         if(operation.equals("/"))
@@ -228,6 +277,7 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
                         Toast.LENGTH_LONG).show();
                 imagesource = getResources().getIdentifier("@drawable/right",null,getPackageName());
                 ansflg.setImageResource(imagesource);
+                Savetodb(level,num1,num2,operation);
             }
             else
             {
@@ -235,6 +285,7 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
                         Toast.LENGTH_LONG).show();
                 imagesource = getResources().getIdentifier("@drawable/redx",null,getPackageName());
                 ansflg.setImageResource(imagesource);
+                Savetodbw(level,num1,num2,operation);
             }
         }
 
