@@ -16,4 +16,5 @@
         <item>level 6</item>
     </string-array>
     <string name="err">This cant be empty</string>
+    <string name="title_activity_status">Status</string>
 </resources>

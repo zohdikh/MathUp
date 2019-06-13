@@ -83,5 +83,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         intent.putExtras(b);
         startActivity(intent);
     }
+
+    public void MoveTo2(View v)
+    {
+        Intent intent = new Intent(MainActivity.this, Status.class);
+        Bundle b = new Bundle();
+        b.putString("level",String.valueOf(level));
+        intent.putExtras(b);
+        startActivity(intent);
+    }
 }
 

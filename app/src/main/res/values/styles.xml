@@ -9,6 +9,7 @@
         <item name="android:navigationBarColor">@color/colorAccent</item>
         <item name="android:statusBarColor">@color/colorPrimary</item>
     </style>
+
     <style name="Theme.Theme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
         <item name="actionBarItemBackground">@drawable/selectable_background_theme</item>
         <item name="popupMenuStyle">@style/PopupMenu.Theme</item>
@@ -68,5 +69,14 @@
         <item name="popupMenuStyle">@style/PopupMenu.Theme</item>
         <item name="dropDownListViewStyle">@style/DropDownListView.Theme</item>
     </style>
+
+    <style name="Theme.Theme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Theme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Theme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
