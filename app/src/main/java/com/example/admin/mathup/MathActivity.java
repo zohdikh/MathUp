@@ -149,16 +149,22 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
         {
             case "1":
              db.InsertRowlvl1(no1,no2,ope);
+             break;
             case "2":
                 db.InsertRowlvl2(no1,no2,ope);
+                 break;
             case "3":
                 db.InsertRowlvl3(no1,no2,ope);
+                break;
             case "4":
                 db.InsertRowlvl4(no1,no2,ope);
+                break;
             case "5":
                 db.InsertRowlvl5(no1,no2,ope);
+                break;
             case "6":
                 db.InsertRowlvl6(no1,no2,ope);
+                break;
         }
 
     }
@@ -168,16 +174,22 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
         switch (lvl) {
             case "1":
                 db.InsertRowlvl1w(no1, no2, ope);
+                break;
             case "2":
                 db.InsertRowlvl2w(no1, no2, ope);
+                break;
             case "3":
                 db.InsertRowlvl3w(no1, no2, ope);
+                break;
             case "4":
                 db.InsertRowlvl4w(no1, no2, ope);
+                break;
             case "5":
                 db.InsertRowlvl5w(no1, no2, ope);
+                break;
             case "6":
                 db.InsertRowlvl6w(no1, no2, ope);
+                break;
         }
     }
     public void ClickMath()
