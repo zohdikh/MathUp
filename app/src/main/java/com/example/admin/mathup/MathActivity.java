@@ -306,20 +306,20 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
     public void Start(int x)
     {
 
-    }
-    @Override
-    public void onClick(View v) {
+            }
+@Override
+public void onClick(View v) {
         ClickMath();
 
 
-    }
-    public void MoveTo(View v){
+        }
+public void MoveTo(View v){
         finish();
         Intent intent = new Intent(MathActivity.this, MathActivity.class);
         Bundle b = new Bundle();
         b.putString("level",String.valueOf(level));
         intent.putExtras(b);
         startActivity(intent);
-    }
+        }
 
 }
