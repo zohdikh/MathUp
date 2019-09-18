@@ -5,11 +5,11 @@ public class User
    private String userId;
     private String name;
     private String email;
-    private String Classroom;
+    private String classroom;
     private  String teacher;
-    private int numberOfAnswered;
-    private int numberOfRightAnswers;
-    private int numberOfWrongAnswers;
+    public int numberOfAnswered;
+    public int numberOfRightAnswers;
+    public int numberOfWrongAnswers;
 
 
 
@@ -17,11 +17,11 @@ public class User
     {
 
     }
-    public User(String userId,String nameId,String emailId,String Classroom,String teacher){
+    public User(String userId,String nameId,String emailId,String classroom,String teacher){
         this.name=nameId;
         this.email=emailId;
         this.userId= userId;
-        this.Classroom=Classroom;
+        this.classroom=classroom;
         this.teacher=teacher;
     }
 
@@ -38,7 +38,7 @@ public class User
     }
 
     public String getClassroom() {
-        return Classroom;
+        return this.classroom;
     }
 
     public String getTeacher() {
@@ -47,6 +47,14 @@ public class User
 
     public int getNumberOfAnswered() {
         return numberOfAnswered;
+    }
+
+    public void setNumberOfAnswered(int numberOfAnswered) {
+        this.numberOfAnswered = numberOfAnswered;
+    }
+
+    public void setNumberOfWrongAnswers(int numberOfWrongAnswers) {
+        this.numberOfWrongAnswers = numberOfWrongAnswers;
     }
 
     public int getNumberOfRightAnswers() {

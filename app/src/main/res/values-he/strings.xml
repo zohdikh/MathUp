@@ -17,4 +17,9 @@
         <item>רמה 6</item>
     </string-array>
     <string name="err">נא הכנס תשובה</string>
+    <string name="auth_failed">שגיאה אימות</string>
+    <string name="minimum_password">הכנס מנימום 6 תווים</string>
+    <string name="Credentials">אנא הכנס שם משתמש וסיסמה</string>
+    <string name="title_activity_status">Status</string>
+    <string name="title_activity_main2">Main Activity 2</string>
 </resources>

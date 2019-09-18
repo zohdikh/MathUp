@@ -15,7 +15,18 @@
         <item>level 5</item>
         <item>level 6</item>
     </string-array>
+    <string-array name="TeachersArr">
+        <item>Zohde</item>
+        <item>Amir</item>
+        <item>Ishay</item>
+        <item>Nadya</item>
+        <item>Leen</item>
+        <item>Sahar</item>
+    </string-array>
     <string name="err">This cant be empty</string>
     <string name="title_activity_status">Status</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="auth_failed">Authintication Failed</string>
+    <string name="minimum_password">Minimum 6 Letters Password</string>
+    <string name="Credentials">Please Enter Credentials</string>
 </resources>

@@ -6,14 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".Status">
 
-    <de.nitri.gauge.Gauge
-        android:id="@+id/gauge"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_centerInParent="true"
-        gauge:initialValue="50"
-        gauge:maxValue="100"
-        gauge:minValue="0"
-        gauge:totalNicks="100"
-        gauge:valuePerNick="1" />
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="104dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Lisit Of All Students"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/statuslist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="83dp"
+        android:textAlignment="center"></ListView>
+
+
 </RelativeLayout>

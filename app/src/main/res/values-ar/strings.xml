@@ -17,4 +17,9 @@
         <item>المستوى السادس</item>
     </string-array>
     <string name="err">الرجاء ادخال جواب</string>
+    <string name="auth_failed">خطأ في التعريف</string>
+    <string name="minimum_password">أدخل 6 ارقام/أحرف</string>
+    <string name="Credentials">ألرجاء أدخال أسم المستخدم وكلمة المرور</string>
+    <string name="title_activity_main2">Main Activity 2</string>
+    <string name="title_activity_status">Status</string>
 </resources>
