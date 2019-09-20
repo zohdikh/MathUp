@@ -38,7 +38,7 @@
         android:layout_width="62dp"
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
         android:text="E-mail"
         app:layout_constraintEnd_toStartOf="@+id/edtclass"
@@ -64,13 +64,13 @@
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="21dp"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="24dp"
         android:text="Password"
         app:layout_constraintEnd_toStartOf="@+id/edtpass"
-        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintHorizontal_bias="0.758"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtmail" />
 
@@ -78,8 +78,8 @@
         android:id="@+id/edtpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="92dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="96dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,10 +90,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="8dp"
         android:text="SchoolClass"
         app:layout_constraintEnd_toStartOf="@+id/edtclass"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -154,4 +155,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/signup" />
+
+    <EditText
+        android:id="@+id/edtSchool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtpass"
+        app:layout_constraintTop_toBottomOf="@+id/edtmail"
+        tools:layout_editor_absoluteX="106dp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="School"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="26dp" />
+
 </android.support.constraint.ConstraintLayout>

@@ -26,7 +26,7 @@ import java.util.List;
 public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     DatabaseReference databaseUsers;
     Button btnsignup;
-    EditText editName ,email,password , schoolclass;
+    EditText editName ,email,password , schoolclass,school;
     Spinner spinnerTeacher;
     String Teacher;
     private FirebaseAuth auth;
@@ -34,7 +34,7 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
     String Email;
     String Pass ;
     String SchoolClass;
-    String id;
+    String School;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,7 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
         password = (EditText) findViewById(R.id.edtpass);
         schoolclass = (EditText) findViewById(R.id.edtclass);
         spinnerTeacher = (Spinner) findViewById(R.id.teacherSpinner);
+        school =(EditText) findViewById(R.id.edtSchool);
         btnsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,6 +60,7 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
 
 
     }
+    //Add Teachers Names To Spinner
     public void addItemsOnSpinner() {
 
         spinnerTeacher = (Spinner) findViewById(R.id.teacherSpinner);
@@ -84,13 +86,14 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
     public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
-
+    //Sign Up User To FirebaseDB and Authintication
     private void SignUp() {
          name = editName.getText().toString().trim();
          Email = email.getText().toString().trim();
          Pass = password.getText().toString().trim();
          SchoolClass = schoolclass.getText().toString().trim();
         Teacher = spinnerTeacher.getSelectedItem().toString();
+        School = school.getText().toString().trim();
 
 
             //id = databaseUsers.push().getKey();
@@ -106,7 +109,7 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
 
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        User user = new User(auth.getCurrentUser().getUid(), name, Email, SchoolClass, Teacher);
+                        User user = new User(auth.getCurrentUser().getUid(), name, Email, SchoolClass, Teacher,School);
                         databaseUsers.child("user").
 
                                 child(auth.getCurrentUser().getUid()).setValue(user);
