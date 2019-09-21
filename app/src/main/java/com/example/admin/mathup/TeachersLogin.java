@@ -6,11 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -22,17 +20,19 @@ public class TeachersLogin extends AppCompatActivity {
     FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        inputEmail = (EditText) findViewById(R.id.edtemail);
+        inputEmail =(EditText) findViewById(R.id.edtEmail);
         inputPassword =(EditText) findViewById(R.id.edtpassword);
         super.onCreate(savedInstanceState);
+        auth=FirebaseAuth.getInstance();
         setContentView(R.layout.activity_teachers_login);
         tlogin = (ImageButton) findViewById(R.id.imgbtn);
         tlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = inputEmail.getText().toString();
-                final String password = inputPassword.getText().toString();
-
+                 //String email = inputEmail.getText().toString();
+                String email = "zohde@mathup.com";
+                //final String password = inputPassword.getText().toString();
+                final String password = "123456";
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
                     return;

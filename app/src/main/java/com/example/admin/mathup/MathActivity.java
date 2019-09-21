@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,7 +30,9 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
     FirebaseUser curruser;
     DatabaseReference reference;
     int numor,numow,numoa;
-
+    int num1 , num2 , num3 ,num4,ope;
+    TextView question;
+    String operation;
 
 
     @Override
@@ -38,12 +41,8 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_math);
         Bundle b = getIntent().getExtras();
         level = b.getString("level");
-        EditText n1 = (EditText) findViewById(R.id.N1);
-        EditText n2 = (EditText) findViewById(R.id.N2);
-        EditText op = (EditText) findViewById(R.id.Op);
         EditText ans = (EditText) findViewById(R.id.Ans);
-        int num1 , num2 , num3 ,num4,ope;
-        String operation;
+        question = findViewById(R.id.txtquestion);
         Random r1 = new Random();
         Random r2 = new Random();
         DBConnections db = new DBConnections(this);
@@ -83,10 +82,8 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
                 operation = "+";
             else
                 operation = "-";
-            n1.setText(String.valueOf(num1));
-            n2.setText(String.valueOf(num2));
-            op.setText(operation.toString());
-            operation = op.getText().toString();
+
+            question.setText(""+num1+operation+num2);
         }
         //user picked level 2
         if(level.equals("2"))
@@ -98,10 +95,8 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
                 operation = "+";
             else
                 operation = "-";
-            n1.setText(String.valueOf(num1));
-            n2.setText(String.valueOf(num2));
-            op.setText(operation.toString());
-            operation = op.getText().toString();
+
+            question.setText(""+num1+operation+num2);
         }
         // user picked level 3
         if(level.equals("3"))
@@ -118,10 +113,7 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
             else
                 operation = "/";
 
-            n1.setText(String.valueOf(num1));
-            n2.setText(String.valueOf(num2));
-            op.setText(operation.toString());
-            operation = op.getText().toString();
+            question.setText(""+num1+operation+num2);
         }
         //user picked level 4
         if(level.equals("4"))
@@ -137,10 +129,8 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
                 operation = "*";
             else
                 operation = "/";
-            n1.setText(String.valueOf(num1));
-            n2.setText(String.valueOf(num2));
-            op.setText(operation.toString());
-            operation = op.getText().toString();
+
+            question.setText(""+num1+operation+num2);
         }
         //user picked level 5
         if(level.equals("5"))
@@ -153,10 +143,8 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
             else
                 operation = "-";
 
-            n1.setText(String.valueOf(num1));
-            n2.setText(String.valueOf(num2));
-            op.setText(operation.toString());
-            operation = op.getText().toString();
+
+            question.setText(""+num1+operation+num2);
         }
         //user picked level 6
         if(level.equals("6"))
@@ -173,10 +161,8 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
                 operation = "*";
             else
                 operation = "/";
-            n1.setText(String.valueOf(num1));
-            n2.setText(String.valueOf(num2));
-            op.setText(operation.toString());
-            operation = op.getText().toString();
+
+            question.setText(""+num1+operation+num2);
         }
 
 
@@ -253,25 +239,19 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
     {
         Bundle b = getIntent().getExtras();
         level = b.getString("level");
-        EditText n1 = (EditText) findViewById(R.id.N1);
-        EditText n2 = (EditText) findViewById(R.id.N2);
-        EditText op = (EditText) findViewById(R.id.Op);
         EditText ans = (EditText) findViewById(R.id.Ans);
-        int num1 , num2  ,ope,imagesource;
+        int imagesource;
         double num3;
         ImageView ansflg = (ImageView)findViewById(R.id.ansflag);
-        String operation;
+
         String empt = getResources().getString(R.string.err);
         ans.onEditorAction(EditorInfo.IME_ACTION_DONE);
-        num1 = Integer.parseInt(n1.getText().toString());
-        num2 = Integer.parseInt(n2.getText().toString());
         if(TextUtils.isEmpty(ans.getText().toString()))
         {
             ans.setError(empt);
             return;
         }
         num3 = Double.parseDouble(ans.getText().toString());
-        operation = op.getText().toString();
         if(operation.equals("+"))
         {
             if(num3 == (num1+num2)) {

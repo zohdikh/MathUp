@@ -44,7 +44,7 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
         databaseUsers = FirebaseDatabase.getInstance().getReference("user");
         btnsignup = (Button) findViewById(R.id.btnsignup);
         editName = (EditText) findViewById(R.id.edtname);
-        email = (EditText) findViewById(R.id.edtmail);
+        email = (EditText) findViewById(R.id.edtEmail);
         password = (EditText) findViewById(R.id.edtpass);
         schoolclass = (EditText) findViewById(R.id.edtclass);
         spinnerTeacher = (Spinner) findViewById(R.id.teacherSpinner);

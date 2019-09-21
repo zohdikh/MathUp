@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -26,6 +27,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+        Button btn;
+        btn = (Button) findViewById(R.id.btntest);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Test.class));
+            }
+        });
 
     }
 
@@ -85,10 +94,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     public void MoveTo2(View v)
     {
-        Intent intent = new Intent(MainActivity.this, Status.class);
-        Bundle b = new Bundle();
-        b.putString("level",String.valueOf(level));
-        intent.putExtras(b);
+        Intent intent = new Intent(MainActivity.this, Test.class);
         startActivity(intent);
     }
 }
