@@ -1,4 +1,4 @@
-package com.example.admin.mathup;
+package com.my.admin.mathup;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

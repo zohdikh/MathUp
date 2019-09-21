@@ -1,0 +1,114 @@
+{
+  "project_info": {
+    "project_number": "23822729651",
+    "firebase_url": "https://mathup-e1b57.firebaseio.com",
+    "project_id": "mathup-e1b57",
+    "storage_bucket": "mathup-e1b57.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23822729651:android:a284577ac02b60cc194bc6",
+        "android_client_info": {
+          "package_name": "com.example.admin.mathup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23822729651-br6vfl860atuh7ad8cce0kjikgfnvjho.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.admin.mathup",
+            "certificate_hash": "898fba27caf08350ecdd550332bd4788227cdccf"
+          }
+        },
+        {
+          "client_id": "23822729651-tkbom2mqsln34925cuc677rj129g2d5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYsA0_Yj7i-Yiy-bYUaTPgghKED_gNUAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23822729651-tkbom2mqsln34925cuc677rj129g2d5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23822729651:android:855d5b373a930592194bc6",
+        "android_client_info": {
+          "package_name": "com.my.admin.mathup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23822729651-tkbom2mqsln34925cuc677rj129g2d5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYsA0_Yj7i-Yiy-bYUaTPgghKED_gNUAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23822729651-tkbom2mqsln34925cuc677rj129g2d5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23822729651:android:af00ca8c6b3b5857194bc6",
+        "android_client_info": {
+          "package_name": "my.app.mathup.mathup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23822729651-2442haatiog00ofk06je3u0p4odd8u9g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "my.app.mathup.mathup",
+            "certificate_hash": "898fba27caf08350ecdd550332bd4788227cdccf"
+          }
+        },
+        {
+          "client_id": "23822729651-tkbom2mqsln34925cuc677rj129g2d5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYsA0_Yj7i-Yiy-bYUaTPgghKED_gNUAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23822729651-tkbom2mqsln34925cuc677rj129g2d5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
